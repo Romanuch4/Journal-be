@@ -1,0 +1,53 @@
+{
+  "name": "journal-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "typecheck": "oxlint --type-aware --type-check",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt",
+    "start": "node dist/index.js",
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "prepare": "husky && husky install"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.9",
+    "hono": "^4.11.9"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "oxfmt": "^0.32.0",
+    "oxlint": "^1.47.0",
+    "oxlint-tsgolint": "^0.12.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.8.3",
+    "vitest": "^4.0.18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Romanuch4/Journal-be.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run lint:fix",
+      "npm run format",
+      "npm run typecheck",
+      "npm run test"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/Romanuch4/Journal-be/issues"
+  },
+  "homepage": "https://github.com/Romanuch4/Journal-be#readme"
+}
