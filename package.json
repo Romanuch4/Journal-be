@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "node --env-file=.env --import=tsx --watch src/index.ts",
     "build": "tsc",
     "typecheck": "oxlint --type-aware --type-check",
     "lint": "oxlint",
@@ -18,7 +18,9 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.19.9",
-    "hono": "^4.11.9"
+    "@t3-oss/env-core": "^0.13.10",
+    "hono": "^4.11.9",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
