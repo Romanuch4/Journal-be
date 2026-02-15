@@ -49,5 +49,8 @@
   "bugs": {
     "url": "https://github.com/Romanuch4/Journal-be/issues"
   },
-  "homepage": "https://github.com/Romanuch4/Journal-be#readme"
+  "homepage": "https://github.com/Romanuch4/Journal-be#readme",
+  "volta": {
+    "node": "22.16.0"
+  }
 }
